@@ -6,7 +6,7 @@ RUN \
   && curl -L -o /usr/local/bin/param-inject "https://github.com/rbi13/aws-param-inject/releases/download/$INJ_VERSION/aws-param-inject-linux-amd64"\
   && chmod +x /usr/local/bin/param-inject
 # CHILD INTERFACE
-ONBUILD ARG HUBBA_NPM=registry.npmjs.org/
+ONBUILD ARG HUBBA_NPM=registry.npmjs.org
 ONBUILD ARG NPM_TOKEN
 ONBUILD ARG BUILDER_LABEL
 ONBUILD LABEL builder=${BUILDER_LABEL}
