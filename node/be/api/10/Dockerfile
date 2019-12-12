@@ -12,7 +12,7 @@ ONBUILD WORKDIR /app
 ONBUILD COPY --from=build /app/server /app/server
 ONBUILD COPY --from=build /app/scripts /app/scripts
 ONBUILD COPY --from=build /app/node_modules /app/node_modules
-ONBUILD COPY --from=build /app/newrelic.js /app/index.js /app/package*.json /app/
+ONBUILD COPY --from=build /app/index.js /app/package*.json /app/
 # TODO: figure out why `npm prune` depends on git?
 # ONBUILD RUN npm prune --production --no-progress
 ONBUILD ENTRYPOINT ["param-inject"]
